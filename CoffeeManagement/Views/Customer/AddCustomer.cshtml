@@ -1,0 +1,41 @@
+﻿@model CoffeeManagement.Models.Customers.Customer
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Add Customer</title>
+</head>
+<body>
+    <div>
+        <form asp-action="AddCustomer">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            @* <div class="form-group"> *@
+            @*             <label asp-for="ID">Nhập ID:</label> *@
+            @*             <input asp-for="ID" type="text" class="form-control" id="exampleInputPhone" aria-describedby="sdtHelp"> *@
+            @*             <small id="emailHelp" class="form-text text-muted">Chúng tôi sẽ không bao giờ chia sẻ sđt của bạn với bất kỳ ai.</small> *@
+            @*         </div> *@
+            <div class="form-group">
+                <label asp-for="ID">Nhập ID của Khách hàng:</label>
+                <input asp-for="ID" type="text" class="form-control" id="exampleInputId" aria-describedby="IdHelp">
+                <small id="IdHelp" class="form-text text-muted">Chúng tôi sẽ không bao giờ chia sẻ ID của bạn với bất kỳ ai.</small>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name">Nhập tên của Khách Hàng:</label>
+                <input asp-for="Name" type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
+                <small id="nameHelp" class="form-text text-muted">Chúng tôi sẽ không bao giờ chia sẻ tên của bạn với bất kỳ ai.</small>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email">Nhập email của Khách Hàng:</label>
+                <input asp-for="Email" type="text" class="form-control" id="exampleInputEmail" aria-describedby="emailHelp">
+                <small id="emailHelp" class="form-text text-muted">Chúng tôi sẽ không bao giờ chia sẻ email của bạn với bất kỳ ai.</small>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phone">Nhập số điện thoại của Khách Hàng:</label>
+                <input asp-for="Phone" type="text" class="form-control" id="exampleInputPhone" aria-describedby="phoneHelp">
+                <small id="phoneHelp" class="form-text text-muted">Chúng tôi sẽ không bao giờ chia sẻ số điện thoại của bạn với bất kỳ ai.</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Tạo</button>
+        </form>
+    </div>
+</body>
+</html>

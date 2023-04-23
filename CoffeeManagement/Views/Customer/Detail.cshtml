@@ -1,0 +1,30 @@
+﻿@model CoffeeManagement.Models.Customers.Customer
+
+<html>
+<head>
+    <meta charset="utf-8" content="width=device-width">
+    <title>Customer Details</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <p>Customer Details</p>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.ID</td>
+                <td>@Model.Name</td>
+                <td>@Model.Email</td>
+                <td>@Model.Phone</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

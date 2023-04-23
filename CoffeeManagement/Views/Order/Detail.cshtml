@@ -1,0 +1,29 @@
+﻿@model CoffeeManagement.Models.Orders.Order
+
+<html>
+<head>
+    <meta charset="utf-8" content="width=device-width">
+    <title>Menu Details</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <p>Menu Details</p>
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.Id</td>
+                <td>@Model.Name</td>
+                <td>@Model.Price</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+

@@ -1,0 +1,22 @@
+﻿@model IEnumerable<CoffeeManagement.Models.Orders.Order>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<button type="button m-3" class="btn btn-primary">
+    <a asp-action="Create" class="text-decoration-none text-white">Create</a>
+</button>
+
+@foreach (var order in @Model)
+{
+        <div class="card m-3" style="width: 18rem;">
+        <img class="card-img-top" src="~/images/@order.Photo" alt="@order.Name">
+            <div class="card-body">
+            <h5 class="card-title">@order.Name</h5>
+            <p class="card-text">@order.Price</p>
+            <a asp-action="Update" asp-route-id="@order.Id" class="btn btn-primary" id="tag-a-open-update">Update</a>
+            <a asp-action="Delete" asp-route-id="@order.Id" class="btn btn-primary" id="tag-a-delete">Delete</a>
+            </div>
+        </div>
+}

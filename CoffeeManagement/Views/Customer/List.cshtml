@@ -1,0 +1,63 @@
+﻿@model IEnumerable<CoffeeManagement.Models.Customers.Customer>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>List all Customer</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <button type="button" class="btn btn-primary">
+        <a asp-action="~/Views/Customer/List.cshtml" class="text-decoration-none text-white">Đăng nhập</a>
+    </button>
+    <button type="button" class="btn btn-primary">
+    <a asp-action="~/Views/Customer/List.cshtml" class="text-decoration-none text-white">Đăng ký</a>
+    </button>
+    <div>
+        <h1>List all Customer</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var customer in Model)
+                {
+                    <tr>
+                        <td>@customer.ID</td>
+                        <td>@customer.Name</td>
+                        <td>@customer.Email</td>
+                        <td>@customer.Phone</td>
+                        <td>
+                            <button type="button" class="btn btn-info">
+                                <a asp-action="UpdateCustomer" asp-route-ID="@customer.ID">Cập Nhật</a>
+                            </button>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-danger">
+                                <a asp-action="DeleteCustomer" asp-route-ID="@customer.ID">Xóa</a>
+                            </button>
+                        </td>
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+        <button type="button" class="btn btn-primary">
+            <a asp-action="AddCustomer" class="text-decoration-none text-white">Thêm Khách Hàng</a>
+        </button>
+        <button type="button" class="btn btn-primary">
+            <a asp-controller="~View/Employee/List" class="text-decoration-none text-white">Nhân viên</a>
+        </button>
+        <button type="button" class="btn btn-primary">
+            <a asp-controller="~View/Order/List" class="text-decoration-none text-white">Thực đơn</a>
+        </button>
+    </div>
+</body>
+</html>

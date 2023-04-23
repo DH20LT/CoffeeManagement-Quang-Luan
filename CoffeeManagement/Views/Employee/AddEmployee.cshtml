@@ -1,0 +1,37 @@
+﻿@model CoffeeManagement.Models.Employees.Employee
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Add Employee</title>
+</head>
+<body>
+    <div>
+        <form asp-action="AddEmployee">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            @* <div class="form-group"> *@
+            @*             <label asp-for="ID">Nhập ID:</label> *@
+            @*             <input asp-for="ID" type="text" class="form-control" id="exampleInputPhone" aria-describedby="sdtHelp"> *@
+            @*             <small id="emailHelp" class="form-text text-muted">Chúng tôi sẽ không bao giờ chia sẽ sđt của bạn với bất kỳ ai.</small> *@
+            @*         </div> *@
+            <div class="form-group">
+                <label asp-for="ID">Nhập ID của Nhân viên:</label>
+                <input asp-for="ID" type="text" class="form-control" id="exampleInputId" aria-describedby="IdHelp">
+                <small id="IdHelp" class="form-text text-muted">Chúng tôi sẽ không bao giờ chia sẻ ID của bạn với bất kỳ ai.</small>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name">Nhập tên của Nhân viên:</label>
+                <input asp-for="Name" type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp">
+                <small id="nameHelp" class="form-text text-muted">Chúng tôi sẽ không bao giờ chia sẻ tên của bạn với bất kỳ ai.</small>
+            </div>
+            <div class="form-group">
+                <label asp-for="Department">Nhập phòng của Nhân Viên:</label>
+                <input asp-for="Department" type="text" class="form-control" id="exampleInputRoom" aria-describedby="roomHelp">
+                <small id="roomHelp" class="form-text text-muted">Chúng tôi sẽ không bao giờ chia sẻ phòng làm việc của bạn với bất kỳ ai.</small>
+            </div>
+            <button type="submit" class="btn btn-primary">Tạo</button>
+        </form>
+    </div>
+</body>
+</html>
